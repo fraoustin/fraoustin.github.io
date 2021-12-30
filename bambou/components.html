@@ -1,0 +1,202 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://docs.siimple.xyz/assets/css/siimple.min.css">
+        <link rel="stylesheet" href="https://docs.siimple.xyz/assets/css/theme.css">  
+        <link rel="stylesheet" href="https://docs.siimple.xyz/assets/css/icons-categories.css">  
+        <title>Bambou | Component</title>
+        <style>
+        .siimple-box--white {
+            background-color: unset;
+        }
+        .siimple-box--center img,
+        .img-center  {
+            display:block;
+            margin:auto;
+        }
+        .siimple-box--center {
+            text-align: center;
+        }
+        .grab {
+            cursor: grab;
+        }
+        .siimple-full--height {
+            min-height: calc(100% <ul>430px);
+        }
+        .siimple-navbar--error small {
+            color: white
+        }
+        .siimple-pre{
+            margin-top: 20px;
+        }
+        .siimple-list--success .siimple-list-item, .siimple-list--success .siimple-list-title{
+            background-color:#4acf7f;
+            color: white;
+        }
+        .siimple-navbar--success small {
+            color: white
+        }
+        </style>
+    </head>
+    <body>
+        <div class="siimple-navbar siimple-navbar--large siimple-navbar--success theme-navbar">
+            <a class="siimple-navbar-title" href="./index.html">
+                <span class="siimple-brand">Bambou</span> <small class="siimple-small">by fraoustin</small>      
+            </a>
+            <a class="siimple-navbar-item siimple--float-right siimple--display-sm-none" href="https://github.com/fraoustin/bambou" target="_blank">
+                GitHub
+            </a>            
+            <a class="siimple-navbar-item siimple--float-right siimple--display-sm-none" href="../index.html" target="">
+                Home
+            </a>
+        </div>
+        <div class="siimple--mt-5 siimple--ml-5 siimple--mr-5 siimple-content siimple-content--large siimple-full--height">
+            <div class="siimple-grid">
+                <div class="siimple-grid-row">
+                    <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+                        <div class="siimple-list siimple-list--success">
+                             <a class="siimple-list-item" href="#general">
+                                <div class="siimple-list-title">General</div>
+                            </a>    
+                             <a class="siimple-list-item" href="#synchronize">
+                                <div class="siimple-list-title">Synchronize</div>
+                            </a>           
+                             <a class="siimple-list-item" href="#groupby">
+                                <div class="siimple-list-title">Group By</div>
+                            </a>               
+                             <a class="siimple-list-item" href="#jinja">
+                                <div class="siimple-list-title">Jinja</div>
+                            </a>                
+                             <a class="siimple-list-item" href="#mail">
+                                <div class="siimple-list-title">Mail</div>
+                            </a>               
+                             <a class="siimple-list-item" href="#display">
+                                <div class="siimple-list-title">Display</div>
+                            </a>               
+                             <a class="siimple-list-item" href="#foreach">
+                                <div class="siimple-list-title">For-each</div>
+                            </a>               
+                             <a class="siimple-list-item" href="#code">
+                                <div class="siimple-list-title">Code</div>
+                            </a>
+                             <a class="siimple-list-item" href="#transform">
+                                <div class="siimple-list-title">Transform</div>
+                            </a>
+                             <a class="siimple-list-item" href="#subflow">
+                                <div class="siimple-list-title">Subflow</div>
+                            </a>
+                             <a class="siimple-list-item" href="#data">
+                                <div class="siimple-list-title">Data</div>
+                            </a>
+                             <a class="siimple-list-item" href="#log">
+                                <div class="siimple-list-title">Log</div>
+                            </a>
+                             <a class="siimple-list-item" href="#link">
+                                <div class="siimple-list-title">Link</div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="siimple-grid-col siimple-grid-col--9 siimple-grid-col--sm-12">
+                        <div class="siimple-h4" id="general">General</div>
+                        A node has
+                        <ul>
+                            <li>main input (in1)</li>
+                            <li>optional input (in2)</li>
+                            <li>main output</li>
+                            <li>error output</li>
+                        </ul>
+                        <div class="siimple-h4" id="synchronize"><img src="./synchronize.png"></img>Synchronize</div>
+                        In
+                        <ul>
+                            <li>in1</li>
+                            <li>in2</li>
+                        </ul>
+                        Out
+                        <ul>
+                            <li>in1</li>
+                            <li>error</li>
+                        </ul>
+                        <br/><img class="img-center" src="./synchro.png" width=400></img>
+                        <div class="siimple-h4" id="groupby"><img src="./groupby.png"></img>Group by</div>
+                        You can add index and aggregate (sum, min, max, mean, count, ...)
+                        <br/><img class="img-center" src="./groupby1.png" width=400></img>
+                        <div class="siimple-h4" id="jinja"><img src="./jinja.png"></img>Jinja</div>
+                        You can generate file from in1 with <a href="https://jinja.palletsprojects.com/en/3.0.x/">jinja language</a><br/>
+                        You can save file on local server or sftp server.<br/>
+                        the jinja script from local server or string.<br/>
+                        You can test jinja node with <a href="test2.json">this flow</a></br>
+                        <div class="siimple-h4" id="mail"><img src="./mail.png"></img>Mail</div>
+                        You can send file with smtp server. The file is a local file or a file from input.
+                        <div class="siimple-h4" id="display"><img src="./display.png"></img>Display</div>
+                        for view data after running with double click on node.<br/>
+                        You can add a limit of row.
+                        <div class="siimple-h4" id="foreach"><img src="./foreach.png"></img>For-each</div>
+                        Node emet by index a dataframe for next input
+                        <div class="siimple-h4" id="code"><img src="./code.png"></img>Code</div>
+                        You add your owner python code.<br/>
+                        The next node receive the out variable
+                        <div class="siimple-h4" id="transform"><img src="./transform.png"></img>Transform</div>
+                        You can transforma dataframe by multi step.<br/>
+                        type of step:
+                        <ul>
+                            <li>drop column</li>
+                            <li>rename column</li>
+                            <li>query filter</li>
+                            <li>sort</li>
+                            <li>change type</li>
+                            <li>sort</li>
+                            <li>pivot</li>
+                            <li>limit row</li>
+                            <li>add column</li>
+                        </ul>
+                        <div class="siimple-h4" id="subflow"><img src="./subflow.png"></img>Subflow</div>
+                        You can run flow with env and version<br/>
+                        <div class="siimple-h4" id="data"><img src="./data.png"></img>data</div>
+                        You can read or write data from
+                        <ul>
+                            <li>drop column</li>
+                            <li>rename column</li>
+                            <li>query filter</li>
+                            <li>sort</li>
+                            <li>change type</li>
+                            <li>sort</li>
+                            <li>pivot</li>
+                            <li>limit row</li>
+                            <li>add column</li>
+                        </ul>                        
+                        <div class="siimple-h4" id="log"><img src="./log.png"></img>log</div>
+                        You can add log in flow.<br/>
+                        You can send to basic log, syslog (only linux) or graylog
+                        <div class="siimple-h4" id="link"><img src="./link.png"></img>link</div>
+                        you can link two input (join or concat)                
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="siimple-footer siimple-footer--medium" align="center">        
+            <div class="siimple-grid">
+                <div class="siimple-grid-row">
+                    <div class="siimple-grid-col siimple-grid-col--6 siimple-grid-col--sm-12" style="text-align:left">
+                        Made with love by <strong>fraoustin</strong>
+                    </div>
+                    <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+                        <div class="theme-footer-group">Community</div>                        
+                        <a href="https://github.com/fraoustin/bambou" class="theme-footer-link" target="_blank">GitHub
+                            <div class="theme-footer-link-description">repositories on GitHub</div>
+                    </div>
+                    <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+                        <div class="theme-footer-group">Support</div>                        
+                        <a href="https://github.com/fraoustin/bambou/issues/new" class="theme-footer-link" target="_blank">Report bug
+                            <div class="theme-footer-link-description">Create a report for a bug</div>
+                        </a>                        
+                        <a href="https://github.com/fraoustin/bambou/issues/new" class="theme-footer-link" target="_blank">Request a feature
+                            <div class="theme-footer-link-description">Suggest an idea for <strong>bambou</strong></div>
+                        </a>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

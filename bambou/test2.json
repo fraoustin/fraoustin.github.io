@@ -1,0 +1,217 @@
+{
+  "flow": {
+    "id": 7,
+    "name": "test jinja",
+    "resume": ""
+  },
+  "map": [
+    {
+      "id": "f40792b6-e3d8-7096-54e8-d27feb82004e",
+      "type": "data",
+      "text": "view data",
+      "x": 251,
+      "y": 289,
+      "inputports": [
+        {
+          "id": "0685a219-3a12-28ab-97d0-6587bfceb9dc",
+          "name": "in1"
+        }
+      ],
+      "outputports": [
+        {
+          "idport": "205596bf-e968-a86f-89aa-0171631635d9",
+          "name": "out1",
+          "target": [
+            {
+              "name": "in1",
+              "idport": "7f709578-c1a2-c23e-6565-c74fda426b22",
+              "id": "bf3e9bbd-8e4d-e4e7-8421-b4bcc27a6241"
+            }
+          ]
+        },
+        {
+          "idport": "ac8be20f-0d5a-d221-acc4-2add7c92acbb",
+          "name": "error",
+          "target": []
+        }
+      ],
+      "parameters": {
+        "idflow": "<< _id >>",
+        "uid": "kxrk1ksr",
+        "limit": "100",
+        "dropindex": "false"
+      }
+    },
+    {
+      "id": "b16ae053-7022-0601-f85f-1f04ccd28716",
+      "type": "db",
+      "text": "Database",
+      "x": 42,
+      "y": 280,
+      "inputports": [
+        {
+          "id": "5d3b7e4b-0794-60c9-68fb-709dff83ffe2",
+          "name": "in1"
+        }
+      ],
+      "outputports": [
+        {
+          "idport": "0c214ff7-3faf-a89c-b416-781167e321b4",
+          "name": "out1",
+          "target": [
+            {
+              "name": "in1",
+              "idport": "0685a219-3a12-28ab-97d0-6587bfceb9dc",
+              "id": "f40792b6-e3d8-7096-54e8-d27feb82004e"
+            }
+          ]
+        },
+        {
+          "idport": "22da32ab-e89e-4302-caf7-8e58f2ca9fc0",
+          "name": "error",
+          "target": []
+        }
+      ],
+      "parameters": {
+        "user": "",
+        "password": "",
+        "type": "csv",
+        "url": "/your/path",
+        "server": "",
+        "port": "",
+        "database": "",
+        "optioncnx": "",
+        "action": "read",
+        "table": "",
+        "query": "",
+        "ifexists": "append",
+        "method": "multi",
+        "pathfile": "test/sales_records.csv",
+        "delimiter": ",",
+        "orient": "index",
+        "sheet": "Sheet1",
+        "dropindex": "false",
+        "loc": "local",
+        "locserver": "",
+        "locuser": "",
+        "locpassword": ""
+      }
+    },
+    {
+      "id": "bf3e9bbd-8e4d-e4e7-8421-b4bcc27a6241",
+      "type": "groupby",
+      "text": "groupby",
+      "x": 412,
+      "y": 298,
+      "inputports": [
+        {
+          "id": "7f709578-c1a2-c23e-6565-c74fda426b22",
+          "name": "in1"
+        }
+      ],
+      "outputports": [
+        {
+          "idport": "dedef7cf-7b70-b093-66eb-9127ac454473",
+          "name": "out1",
+          "target": [
+            {
+              "name": "in1",
+              "idport": "89264385-d2aa-39ed-95c0-cbc371ea449a",
+              "id": "c8e98442-558a-7f86-b5a3-1c4523b3dc45"
+            }
+          ]
+        },
+        {
+          "idport": "3355be07-1539-b9a5-4b9d-78dc73397fd4",
+          "name": "error",
+          "target": []
+        }
+      ],
+      "parameters": {
+        "groupbys": [
+          "Region",
+          "Country"
+        ],
+        "aggs": [
+          {
+            "mode": "sum",
+            "col": "Total Cost"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c8e98442-558a-7f86-b5a3-1c4523b3dc45",
+      "type": "data",
+      "text": "view data",
+      "x": 564,
+      "y": 299,
+      "inputports": [
+        {
+          "id": "89264385-d2aa-39ed-95c0-cbc371ea449a",
+          "name": "in1"
+        }
+      ],
+      "outputports": [
+        {
+          "idport": "0c1f2df5-b944-f69b-a588-864b759d6f1d",
+          "name": "out1",
+          "target": [
+            {
+              "name": "in1",
+              "idport": "68706732-d0b5-d4c9-1cae-4d492b9b120f",
+              "id": "20ba0740-fd83-921c-7343-c557bbea5403"
+            }
+          ]
+        },
+        {
+          "idport": "3cafdf39-82be-c9a9-5093-4749179f04c0",
+          "name": "error",
+          "target": []
+        }
+      ],
+      "parameters": {
+        "idflow": "<< _id >>",
+        "uid": "kxrnsb3x",
+        "limit": "100",
+        "dropindex": "false"
+      }
+    },
+    {
+      "id": "20ba0740-fd83-921c-7343-c557bbea5403",
+      "type": "htmljinja",
+      "text": "Html Jinja",
+      "x": 708,
+      "y": 291,
+      "inputports": [
+        {
+          "id": "68706732-d0b5-d4c9-1cae-4d492b9b120f",
+          "name": "in1"
+        }
+      ],
+      "outputports": [
+        {
+          "idport": "866e2a2a-1ce7-4f32-9df5-c8e4390dc180",
+          "name": "out1",
+          "target": []
+        },
+        {
+          "idport": "6683404e-0f50-c815-6f89-d51847bd6e98",
+          "name": "error",
+          "target": []
+        }
+      ],
+      "parameters": {
+        "template": "<html>\n  <body>\n    {% set in2 = in1.groupby(\"Region\").agg(**{'sum(Total Cost)':('sum(Total Cost)','sum')}) %}\n    <table>\n      <tr><td>region</td><td>cost</td></tr>\n      {% for row in range(0, in2|length) %}\n      <tr>\n        <td>{{ in2.index.values[row] }}</td>\n        <td>{{ in2.iloc[row]['sum(Total Cost)'] }}</td>\n      </tr>\n      {% endfor %}\n    </table>\n    <table>\n      <tr><td>region</td><td>country</td><td>cost</td></tr>\n      {% for row in range(0, in1|length) %}\n      <tr>\n        <td>{{ in1.index.values[row][0] }}</td>\n        <td>{{ in1.index.values[row][1] }}</td>\n        <td>{{ in1.iloc[row]['sum(Total Cost)'] }}</td>\n      </tr>\n      {% endfor %}\n    </table>\n  </body>\n</html>",
+        "dest": "local",
+        "locserver": "fraoustin.fr",
+        "locuser": "root",
+        "locpassword": "systemlx",
+        "path": "test/jinja.html",
+        "templatepath": "",
+        "templatesrc": "code"
+      }
+    }
+  ],
+  "env": {}
+}

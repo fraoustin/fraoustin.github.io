@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://docs.siimple.xyz/assets/css/siimple.min.css">
+        <link rel="stylesheet" href="https://docs.siimple.xyz/assets/css/theme.css">  
+        <link rel="stylesheet" href="https://docs.siimple.xyz/assets/css/icons-categories.css">  
+        <title>Documentation | fraoustin</title>
+        <style>
+        .siimple-box--white {
+            background-color: unset;
+        }
+        .siimple-box--center img,
+        .img-center  {
+            display:block;
+            margin:auto;
+        }
+        .siimple-box--center {
+            text-align: center;
+        }
+        .grab {
+            cursor: grab;
+        }
+        .siimple-full--height {
+            min-height: calc(100% <ul>430px);
+        }
+        .siimple-navbar--error small {
+            color: white
+        }
+        .siimple-pre{
+            margin-top: 20px;
+        }
+        .siimple-list--error .siimple-list-item, .siimple-list--error .siimple-list-title{
+            background-color:#ee675d;
+            color: white;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="siimple-navbar siimple-navbar--large siimple-navbar--error">
+            <a class="siimple-navbar-title" href="./index.html">
+                <span class="siimple-brand">redmine_indicator</span> <small class="siimple-small">by fraoustin</small>      
+            </a>
+            <a class="siimple-navbar-item siimple--float-right siimple--display-sm-none" href="https://github.com/fraoustin/redmine_indicator" target="_blank">
+                GitHub
+            </a>            
+            <a class="siimple-navbar-item siimple--float-right siimple--display-sm-none" href="./index.html" target="">
+                Home
+            </a>
+        </div>
+        <div class="siimple--mt-5 siimple--ml-5 siimple--mr-5 siimple-content siimple-content--large siimple-full--height">
+            <div class="siimple-grid">
+                <div class="siimple-grid-row">
+                    <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+                        <div class="siimple-list siimple-list--error">
+                             <a class="siimple-list-item" href="#summary">
+                                <div class="siimple-list-title">Summary</div>
+                            </a>
+                             <a class="siimple-list-item" href="#installation">
+                                <div class="siimple-list-title">Installation</div>
+                            </a>
+                             <a class="siimple-list-item" href="#usage">
+                                <div class="siimple-list-title">Usage</div>
+                            </a>              
+                        </div>
+
+                    </div>
+                    <div class="siimple-grid-col siimple-grid-col--9 siimple-grid-col--sm-12">
+                        <div class="siimple-h4" id="summary">Summary</div>
+                        Add block with main indicator on my page and project page
+                        <br/><img class="img-center" src="https://github.com/fraoustin/redmine_indicator/raw/master/screenshots/1.png"></img>
+                        <div class="siimple-h4" id="installation">Installation</div>
+                            <pre class="siimple-pre">
+cd redmine/plugins
+git clone https://github.com/fraoustin/redmine_indicator.git
+rake redmine:plugins:migrate NAME=redmine_indicator
+                            </pre>
+                            and restart redmine
+                        <div class="siimple-h4" id="usage">Usage</div>
+                        On your page, can you add
+
+<ul>my issues by priority</ul>
+
+<br/><img class="img-center" src="https://github.com/fraoustin/redmine_indicator/raw/master/screenshots/2.png"></img>
+
+<ul>my issues by status</ul>
+
+<br/><img class="img-center" src="https://github.com/fraoustin/redmine_indicator/raw/master/screenshots/3.png"></img>
+
+<ul>my issues by tracker</ul>
+
+<br/><img class="img-center" src="https://github.com/fraoustin/redmine_indicator/raw/master/screenshots/4.png"></img>
+
+<ul>my issues due</ul>
+
+<br/><img class="img-center" src="https://github.com/fraoustin/redmine_indicator/raw/master/screenshots/5.png"></img>
+
+<ul>my issues next</ul>
+
+<br/><img class="img-center" src="https://github.com/fraoustin/redmine_indicator/raw/master/screenshots/6.png"></img>
+
+<ul>my issues today</ul>
+
+<br/><img class="img-center" src="https://github.com/fraoustin/redmine_indicator/raw/master/screenshots/7.png"></img>
+
+<ul>my issues opened closed today</ul>
+
+<br/><img class="img-center" src="https://github.com/fraoustin/redmine_indicator/raw/master/screenshots/8.png"></img>
+
+<ul>my issues opened closed on 10 days</ul>
+
+<br/><img class="img-center" src="https://github.com/fraoustin/redmine_indicator/raw/master/screenshots/10.png"></img>
+
+<ul><ul>my issues opened closed on 10 weeks</ul>
+
+<ul>my issues summary</ul>
+
+<br/><img class="img-center" src="https://github.com/fraoustin/redmine_indicator/raw/master/screenshots/9.png"></img>
+
+
+<ul>my spent time on 10 days</ul>
+
+<br/><img class="img-center" src="https://github.com/fraoustin/redmine_indicator/raw/master/screenshots/11.png"></img>
+
+<ul>my spent_time on 10 weeks</ul>
+
+<br/><img class="img-center" src="https://github.com/fraoustin/redmine_indicator/raw/master/screenshots/12.png"></img>
+
+
+You can add same block in project's page "overview" with change value of custom field of projet:
+
+<ul>
+<li>indicator_left_top</li>
+<li>indicator_left_bottom</li>
+<li>indicator_right</li>
+</ul>
+
+<br/><img class="img-center" src="https://github.com/fraoustin/redmine_indicator/raw/master/screenshots/13.png" width="600" ></img>
+
+<br/><img class="img-center" src="https://github.com/fraoustin/redmine_indicator/raw/master/screenshots/14.png" width="600"></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="siimple-footer siimple-footer--medium" align="center">        
+            <div class="siimple-grid">
+                <div class="siimple-grid-row">
+                    <div class="siimple-grid-col siimple-grid-col--6 siimple-grid-col--sm-12" style="text-align:left">
+                        Made with love by <strong>fraoustin</strong>
+                    </div>
+                    <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+                        <div class="theme-footer-group">Community</div>                        
+                        <a href="https://github.com/fraoustin" class="theme-footer-link" target="_blank">GitHub
+                            <div class="theme-footer-link-description">Our repositories on GitHub</div>
+                    </div>
+                    <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+                        <div class="theme-footer-group">Support</div>                        
+                        <a href="https://github.com/fraoustin/redmine_indicator/issues/new" class="theme-footer-link" target="_blank">Report bug
+                            <div class="theme-footer-link-description">Create a report for a bug</div>
+                        </a>                        
+                        <a href="https://github.com/fraoustin/redmine_indicator/issues/new" class="theme-footer-link" target="_blank">Request a feature
+                            <div class="theme-footer-link-description">Suggest an idea for <strong>redmine_indicator</strong></div>
+                        </a>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

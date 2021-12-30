@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://docs.siimple.xyz/assets/css/siimple.min.css">
+        <link rel="stylesheet" href="https://docs.siimple.xyz/assets/css/theme.css">  
+        <link rel="stylesheet" href="https://docs.siimple.xyz/assets/css/icons-categories.css">  
+        <title>Bambou | Started</title>
+        <style>
+        .siimple-box--white {
+            background-color: unset;
+        }
+        .siimple-box--center img,
+        .img-center  {
+            display:block;
+            margin:auto;
+        }
+        .siimple-box--center {
+            text-align: center;
+        }
+        .grab {
+            cursor: grab;
+        }
+        .siimple-full--height {
+            min-height: calc(100% <ul>430px);
+        }
+        .siimple-navbar--error small {
+            color: white
+        }
+        .siimple-pre{
+            margin-top: 20px;
+        }
+        .siimple-list--success .siimple-list-item, .siimple-list--success .siimple-list-title{
+            background-color:#4acf7f;
+            color: white;
+        }
+        .siimple-navbar--success small {
+            color: white
+        }
+        </style>
+    </head>
+    <body>
+        <div class="siimple-navbar siimple-navbar--large siimple-navbar--success theme-navbar">
+            <a class="siimple-navbar-title" href="./index.html">
+                <span class="siimple-brand">Bambou</span> <small class="siimple-small">by fraoustin</small>      
+            </a>
+            <a class="siimple-navbar-item siimple--float-right siimple--display-sm-none" href="https://github.com/fraoustin/bambou" target="_blank">
+                GitHub
+            </a>            
+            <a class="siimple-navbar-item siimple--float-right siimple--display-sm-none" href="./index.html" target="">
+                Home
+            </a>
+        </div>
+        <div class="siimple--mt-5 siimple--ml-5 siimple--mr-5 siimple-content siimple-content--large siimple-full--height">
+            <div class="siimple-grid">
+                <div class="siimple-grid-row">
+                    <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+                        <div class="siimple-list siimple-list--success">
+                             <a class="siimple-list-item" href="#run">
+                                <div class="siimple-list-title">Run by API</div>
+                            </a>   
+                        </div>
+
+                    </div>
+                    <div class="siimple-grid-col siimple-grid-col--9 siimple-grid-col--sm-12">
+                        <div class="siimple-h4" id="run">Run by API</div>
+                        You can use api with your token
+                            <pre class="siimple-pre">
+curl -X POST https://test.fraoustin.fr/flow/4/run?api=ea758b56-2ae0-452a-9d84-f797006b4cf3
+curl -X POST -d "version=0.0.1" https://test.fraoustin.fr/flow/4/run?api=ea758b56-2ae0-452a-9d84-f797006b4cf3
+                            </pre>
+                            You can read the token in user information.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="siimple-footer siimple-footer--medium" align="center">        
+            <div class="siimple-grid">
+                <div class="siimple-grid-row">
+                    <div class="siimple-grid-col siimple-grid-col--6 siimple-grid-col--sm-12" style="text-align:left">
+                        Made with love by <strong>fraoustin</strong>
+                    </div>
+                    <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+                        <div class="theme-footer-group">Community</div>                        
+                        <a href="https://github.com/fraoustin/bambou" class="theme-footer-link" target="_blank">GitHub
+                            <div class="theme-footer-link-description">repositories on GitHub</div>
+                    </div>
+                    <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+                        <div class="theme-footer-group">Support</div>                        
+                        <a href="https://github.com/fraoustin/bambou/issues/new" class="theme-footer-link" target="_blank">Report bug
+                            <div class="theme-footer-link-description">Create a report for a bug</div>
+                        </a>                        
+                        <a href="https://github.com/fraoustin/bambou/issues/new" class="theme-footer-link" target="_blank">Request a feature
+                            <div class="theme-footer-link-description">Suggest an idea for <strong>bambou</strong></div>
+                        </a>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
