@@ -59,7 +59,11 @@
                                 <div class="siimple-list-title">Run by API</div>
                             </a>   
                         </div>
-
+                        <div class="siimple-list siimple-list--success">
+                             <a class="siimple-list-item" href="#run">
+                                <div class="siimple-list-title">Timestamped a file</div>
+                            </a>   
+                        </div>
                     </div>
                     <div class="siimple-grid-col siimple-grid-col--9 siimple-grid-col--sm-12">
                         <div class="siimple-h4" id="run">Run by API</div>
@@ -69,6 +73,14 @@ curl -X POST https://test.fraoustin.fr/flow/4/run?api=ea758b56-2ae0-452a-9d84-f7
 curl -X POST -d "version=0.0.1" https://test.fraoustin.fr/flow/4/run?api=ea758b56-2ae0-452a-9d84-f797006b4cf3
                             </pre>
                             You can read the token in user information.
+                        <div class="siimple-h4" id="run">Timestamped a file</div>
+                        <div class="siimple-tip siimple-tip--warning siimple-tip--exclamation">
+                            New from 0.8.2
+                        </div>
+                        If you want add date in name of file, you can use the environment
+                            <pre class="siimple-pre">
+{% now 'local', '%Y%m%d_%H%M%S' %}.json
+                            </pre>
                         </div>
                     </div>
                 </div>
