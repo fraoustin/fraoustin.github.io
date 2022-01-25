@@ -63,7 +63,10 @@
                             </a> 
                              <a class="siimple-list-item" href="#docker">
                                 <div class="siimple-list-title">Docker</div>
-                            </a>            
+                            </a>
+                            <a class="siimple-list-item" href="#windows">
+                               <div class="siimple-list-title">Windows</div>
+                           </a>           
                         </div>
 
                     </div>
@@ -120,8 +123,15 @@ docker run -p 5000:5000 -d fraoustin/bambou
                             </pre>
                         You can add directory for database and data
                         <pre class="siimple-pre">
-docker run -p 5000:5000 -d -v <your-path>:/db -v <yourpath>:/data fraoustin/bambou
+docker run -p 5000:5000 -d -v &lt;your-path&gt;:/db -v &lt;yourpath&gt;:/data fraoustin/bambou
                         </pre>
+                        <div class="siimple-h4" id="windows">Windows</div>
+                        You can download and unzip the package https://github.com/fraoustin/bambou/releases/download/0.9.1/bambou_0.9.1.zip.
+                        You can load bamabou.exe and you can use bambou on <b>http://127.0.0.1:5000/</b> with 
+                        <ul>
+                            <li>login <b>admin@localhost</b></li>
+                            <li>and password <b>admin</b></li>
+                        </ul>
                     </div>
                 </div>
             </div>

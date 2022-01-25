@@ -94,6 +94,12 @@
                              <a class="siimple-list-item" href="#link">
                                 <div class="siimple-list-title">Link</div>
                             </a>
+                            <a class="siimple-list-item" href="#comment">
+                               <div class="siimple-list-title">Comment</div>
+                            </a>
+                            <a class="siimple-list-item" href="#extra">
+                               <div class="siimple-list-title">Extra Node</div>
+                            </a>
                         </div>
 
                     </div>
@@ -106,7 +112,7 @@
                             <li>main output</li>
                             <li>error output</li>
                         </ul>
-                        You can test multi nodes <a href="flow.json">this flow</a></br>
+                        You can test multi nodes <a href="flowtest.json">this flow</a></br>
                         <div class="siimple-h4" id="synchronize"><img src="./synchronize.png"></img>Synchronize</div>
                         In
                         <ul>
@@ -118,6 +124,16 @@
                             <li>in1</li>
                             <li>error</li>
                         </ul>
+                        You can use shortcurt
+                        <ul>
+                            <li>Crtl+Alt+c : copy node</li>
+                            <li>Crtl+Alt+v : paste node</li>
+                            <li>Crtl+s: save node</li>
+                            <li>Crtl+entr: run flow</li>
+                            <li>Crtl++ zoom in</li>
+                            <li>Crtl+- zoom out</li>
+                            <li>Shift mousewheel zoom in or out</li>
+                        </ul>
                         <br/><img class="img-center" src="./synchro.png" width=400></img>
                         <div class="siimple-h4" id="groupby"><img src="./groupby.png"></img>Group by</div>
                         You can add index and aggregate (sum, min, max, mean, count, ...)
@@ -127,6 +143,37 @@
                         You can save file on local server or sftp server.<br/>
                         the jinja script from local server or string.<br/>
                         You can test jinja node with <a href="test2.json">this flow</a></br>
+                        
+                        <div class="siimple-tip siimple-tip--warning siimple-tip--exclamation">
+                            New from 0.8.5
+                        </div>
+                        You can use filter:
+                        <ul>
+                            <li>columns</li>
+                            <li>rows</li>
+                            <li>rows_of_dict</li>
+                        </ul>
+                        Sample:
+                        <pre>
+                            &lt;div class="siimple-table"&gt;
+                            &lt;div class="siimple-table-header"&gt;
+                                &lt;div class="siimple-table-row"&gt;
+                                {% for col in in1 | columns %}
+                                    &lt;div class="siimple-table-cell"&gt;{{ col }}&lt;/div&gt;
+                                {% endfor %}
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="siimple-table-body"&gt;
+                                {% for row in in1 | rows %}
+                                &lt;div class="siimple-table-row"&gt;
+                                    {% for val  in row %}
+                                &lt;div class="siimple-table-cell"&gt;{{ val }}&lt;/div&gt;
+                                {% endfor %}
+                                &lt;/div&gt;
+                                {% endfor %}
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        </pre>
                         <div class="siimple-h4" id="mail"><img src="./mail.png"></img>Mail</div>
                         You can send file with smtp server. The file is a local file or a file from input.
                         <div class="siimple-h4" id="display"><img src="./display.png"></img>Display</div>
@@ -184,12 +231,31 @@
                         </div>                        
                         <ul>
                             <li>webdav server</li>
+                        </ul> 
+                        
+                        <div class="siimple-tip siimple-tip--warning siimple-tip--exclamation">
+                            New from 0.9.0
+                        </div>                        
+                        <ul>
+                            <li>ftp</li>
+                            <li>sharepoint365: you need indicate the name of file in path and the url of site and the url of file</li>
+                            <li>GoogleDrive: you need indicate the json secret of accountservice and enable GoogleDrive APIon GCP</li>
                         </ul>          
                         <div class="siimple-h4" id="log"><img src="./log.png"></img>log</div>
                         You can add log in flow.<br/>
                         You can send to basic log, syslog (only linux) or graylog
                         <div class="siimple-h4" id="link"><img src="./link.png"></img>link</div>
-                        you can link two input (join or concat)                
+                        you can link two input (join or concat)                        
+                        <div class="siimple-tip siimple-tip--warning siimple-tip--exclamation">
+                            New from 0.8.5
+                        </div>
+                        <div class="siimple-h4" id="comment"><img src="./comment.png"></img>Comment</div>
+                        you can add a comment in your flow                        
+                        <div class="siimple-tip siimple-tip--warning siimple-tip--exclamation">
+                            New from 0.8.5
+                        </div>
+                        <div class="siimple-h4" id="extra">Extra Nodes</div>
+                        You can create your owner node in the path &lt;BAMBOU_PATH&gt;/nodesextra. In &lt;BAMBOU_PATH&gt;/nodesextra you can find a sample node.
                     </div>
                 </div>
             </div>
